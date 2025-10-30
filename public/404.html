@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Сохраняем текущий путь и перенаправляем на главную
+        const path = window.location.pathname;
+        const repoName = 'my-vite-app'; 
+        
+        // Если пытаемся получить доступ к странице как к маршруту
+        if (path.includes('/films') && !path.includes('.html')) {
+            window.location.href = `/${repoName}/films/films.html`;
+        } else if (path.includes('/converter') && !path.includes('.html')) {
+            window.location.href = `/${repoName}/converter/converter.html`;
+        } else if (path.includes('/weather') && !path.includes('.html')) {
+            window.location.href = `/${repoName}/weather/weather.html`;
+        } else {
+            // Перенаправляем на главную
+            window.location.href = `/${repoName}/`;
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
