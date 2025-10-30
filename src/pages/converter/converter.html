@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конвертер валют</title>
+  <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-link">← Назад</a>
+      <h1>Конвертер валют</h1>
+    </header>
+    
+    <div class="converter">
+      <div class="input-group">
+        <input type="number" id="amount" placeholder="Сумма" value="1">
+        <select id="from-currency">
+          <option value="USD">USD - Доллар США</option>
+          <option value="EUR">EUR - Евро</option>
+          <option value="RUB" selected>RUB - Российский рубль</option>
+        </select>
+      </div>
+      
+      <button id="convert-btn">Конвертировать</button>
+      
+      <div class="input-group">
+        <input type="text" id="result" readonly placeholder="Результат">
+        <select id="to-currency">
+          <option value="USD" selected>USD - Доллар США</option>
+          <option value="EUR">EUR - Евро</option>
+          <option value="RUB">RUB - Российский рубль</option>
+        </select>
+      </div>
+    </div>
+    
+    <div id="exchange-rates" class="rates-table">
+      <h3>Текущие курсы</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Валюта</th>
+            <th>Курс к RUB</th>
+          </tr>
+        </thead>
+        <tbody id="rates-body">
+          <!-- Курсы валют будут загружены здесь -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="error" class="error"></div>
+  </div>
+  
+  <footer class="footer">
+    <p>Данная страница сделана в рамках курса по web разработке</p>
+  </footer>
+
+  <script type="module" src="converter.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Многостраничное приложение</title>
+  <script type="module" src="/src/main.js"></script>
+  <style>
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      padding: 0 0 1px 0;
+      background: #141414;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="app">
+    <nav>
+      <h1>Главное меню</h1>
+      <ul>
+        <li><a href="#" data-page="films">Топ российские фильмы</a></li>
+        <li><a href="#" data-page="converter">Конвертер валют</a></li>
+        <li><a href="#" data-page="weather">Погода в Нижнем Новгороде</a></li>
+      </ul>
+    </nav>
+  </div>
+  <footer class="footer">
+    <p>Данная страница сделана в рамках курса по web разработке</p>
+  </footer>
+</body>
+</html>
