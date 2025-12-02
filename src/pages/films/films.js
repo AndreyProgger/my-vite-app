@@ -1,7 +1,7 @@
 import './films.css'
 
 const API_KEY = 'MXNJ88B-0RQ44HV-QXH6WP6-J3QNVHB'; 
-const API_URL = 'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=20&lists=top250&year=2010-2023&countries.name=Россия';
+const API_URL = 'https://api.poiskkino.dev/v1.4/movie?page=1&limit=20&lists=top250&year=2010-2023&countries.name=Россия';
 
 async function loadFilms() {
   const container = document.getElementById('films-container');
